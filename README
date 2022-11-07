@@ -1,1 +1,39 @@
 
+# Chatbot with Suggestions and intent match replies
+- The suggestions and responses are loaded from the intent file uploaded by user.
+- The pattern of question is saved in database and used by chatbot to generate a response.
+- Dashboard created for chatbot creators.
+    - Create multiple chatbots with a account.
+    - Data analysis tab added.
+    - Data of chatbot users added to Dashboard.
+    - AutoScrapping and ManualScrapping of FAQ pages added to Dashboard.
+    - FAQ's loaded into selected chatbot.
+
+## Chatbot creation
+- ### An account is needed to start creating a chatbot
+    - To create a account [click here](http://127.0.0.1:8000/account/register/)
+    - Following are required to create a account:
+        - Unique username
+        - Email
+        - Password (minimum length of 8 characters which contains alphabet, a special character, and numbers)
+- After account creation you can navigate to `Train a Chatbot` option available under the `Chatbots` tab.
+- Give your chatbot a unique name and pretrained intent data.
+```
+{
+  "intents": 
+  [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Hey","Is anyone there?", "Hello", "Good day", "Heyo", "hii", "hiii", "hiiii"],
+         "responses": ["Hello! What would you like to know?👀"],
+         "context_set": ""
+        },
+        {
+          "patterns": ["What is your name?"],
+          "responses": ["I am Chiti the chatbot."]
+        }
+        
+   ]
+}
+```
+- A starting message can be added while creating the chatbot.
+- The chatbot also has the option to enable Text to speech which can be enabled.
